@@ -1,0 +1,8 @@
+Vert : #99CC00
+Rose : #E84E6A
+Bleu : #3A92E9
+Jaune : #FCCA00
+
+Noir : #0F1516
+Gris : #707070
+GrisClair : #999999

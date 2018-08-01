@@ -1,0 +1,240 @@
+﻿@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+/* font-family: 'Open Sans', sans-serif; */
+$color-rose: #E84E6A;
+$color-vert: #99CC00;
+$color-bleu: #3A92E9;
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #0f1516;
+}
+
+.card {
+  width: 360px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px $color-bleu;
+@media (min-width: 1280px) { 
+ width:960px;
+}
+}
+
+h3 {
+  font-weight: 600;
+@media (min-width: 1280px) { 
+margin-top:-100px; color:#fff;
+}
+}
+
+h5 {
+  text-transform: uppercase;
+  margin: 10px 0 30px;
+}
+
+.text-danger {
+  color: $color-rose;
+}
+
+.text-primary {
+  color: $color-bleu;
+}
+
+.bg-success {
+  background: $color-vert !important;
+}
+
+.progress, .no-progress {
+  height: 0.5rem;
+}
+
+ol li {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 200;
+  color: #707070;
+}
+
+ol {
+  counter-reset: seances;
+  li {
+    list-style-type: none;
+    counter-increment: seances;
+    margin-bottom: 10px;
+    &:before {
+      content: counter(seances);
+      padding: 5px 10px 6px;
+      margin-right: 12px;
+      vertical-align: top;
+      border: 1px solid $color-rose;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      font-size: 0.8em;
+      color: $color-rose;
+      margin-left: -42px;
+    }
+    &:hover:before {
+      background: $color-rose;
+      color: #fff;
+    }
+    &:after {
+      content: "›";
+      color: $color-rose;
+      font-weight: 100;
+      font-size: 40px;
+      float: right;
+      margin-top: -70px;
+      font-stretch: 200%;
+    }
+    &:hover:after {
+      color: $color-bleu;
+    }
+  }
+}
+
+button.close {
+  position: absolute;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  background: #fff;
+  color: $color-bleu;
+  line-height: 30px;
+  opacity: 1;
+@media (min-width: 1280px) {
+display:none;
+}
+}
+
+.marq {
+  background: #fff;
+  box-shadow: 0px 0px 3px #999;
+  padding: 12px 8px;
+  margin: -40px 0 0 -10px;
+  line-height: 60px;
+  text-align: center;
+  width: 40px;
+  svg, i {
+    color: $color-bleu;
+  }
+@media (min-width: 1280px) { 
+margin: -40px 0 0 80px;
+}
+}
+
+.articles {
+  font-weight: 600;
+  font-size: 12px;
+  img {
+    margin-bottom: 10px;
+  }
+}
+
+/* Elastislide Style */
+
+.elastislide-list {
+  list-style-type: none;
+  display: none;
+}
+
+.no-js .elastislide-list {
+  display: block;
+}
+
+.elastislide-carousel ul li {
+  min-width: 20px;
+  /* minimum width of the image (min width + border) */
+}
+
+.elastislide-wrapper {
+  position: relative;
+  background-color: #fff;
+  margin: 0 auto;
+  min-height: 60px;
+  &.elastislide-loading {
+    background-image: url(../images/partenaires/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.elastislide-carousel {
+  overflow: hidden;
+  position: relative;
+  ul {
+    position: relative;
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+.elastislide-horizontal ul {
+  white-space: nowrap;
+  max-height:160px !important;
+}
+
+.elastislide-carousel ul li {
+  margin: 0;
+  -webkit-backface-visibility: hidden;
+  height: 200px;
+}
+
+.elastislide-horizontal ul li {
+  height: 100%;
+  display: inline-block;
+  max-height:160px !important;
+  a {
+  display: inline-block;
+  width: 100%;
+  img {
+    display: block;
+    border: 2px solid white;
+    max-width: 100%;
+  }
+}
+}
+
+/* Navigation Arrows */
+
+.elastislide-wrapper nav span {
+  position: absolute;
+  background: #303030 url(../images/partenaires/nav.png) no-repeat 4px 3px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  text-indent: -9000px;
+  cursor: pointer;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.elastislide-horizontal nav span {
+  top: 50%;
+  left: 10px;
+  margin-top: -11px;
+}
+.elastislide-horizontal nav span.elastislide-next {
+  right: 10px;
+  left: auto;
+  background-position: 4px -17px;
+}
+
+@media (min-width: 1280px) { 
+.col-xl-4 {border-left: 1px solid rgba(0,0,0,.1);}
+.card > img.img-fluid {width:960px; height:340px; background:$color-bleu; padding:0 0 0 506px;}
+ }
